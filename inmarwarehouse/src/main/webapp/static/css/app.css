@@ -1,0 +1,50 @@
+body, #mainWrapper {
+	height: 70%;
+	background-color:rgb(245, 245, 245);
+}
+
+body, .form-control{
+	font-size:12px!important;
+}
+
+.floatRight{
+	float:right;
+	margin-right: 100px;
+}
+
+.has-error{
+	color:red;
+}
+
+.formcontainer{
+	background-color: #DAE8E8;
+	padding: 20px;
+}
+
+.tablecontainer{
+	padding-left: 20px;
+}
+
+.generic-container {
+  width:95%;
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #EAE7E7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 0 30px black;
+}
+
+.custom-width {
+    width: 60px !important;
+    height : 25px;
+    padding: 0px 3px;
+}
+
+.custom-width1 {
+    width: 10px !important;
+    height : 10px;
+    line-height : 0.4;
+}

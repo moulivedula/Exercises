@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>utf-8</charset>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    
+    <appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    		<File>/Volumes/Part1/workspace/inmarwarehouse/logs/inmar.log</File>
+    		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+    		    <!-- daily rollover -->
+    			<FileNamePattern>rest-demo.%d{yyyy-MM-dd}.log</FileNamePattern>
+
+    			<!-- keep 30 days' worth of history -->
+    			<maxHistory>30</maxHistory>			
+    		</rollingPolicy>
+
+    		<encoder>
+    			<Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</Pattern>
+    		</encoder> 	    
+      	</appender>
+
+    <logger name="org.springframework" level="error"/>
+
+    <logger name="org.hibernate" level="error"/>
+
+    <root level="DEBUG">
+        <appender-ref ref="console"/>
+        <appender-ref ref="dailyRollingFileAppender"/>
+    </root>
+
+</configuration>
